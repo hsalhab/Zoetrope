@@ -1,9 +1,16 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import { Container, Image, Button } from 'semantic-ui-react';
 
 class App extends Component {
   render() {
-    return <h1>React App</h1>
+    return (
+      <Container>
+        <Image>
+          <Button>Click Here</Button>
+        </Image>
+      </Container>
+    )
   }
 }
 
