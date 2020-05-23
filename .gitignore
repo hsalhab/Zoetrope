@@ -1,7 +1,7 @@
 env/
 manager/app/__pycache__/*
 node_modules
-
+.vscode
 
 # Created by https://www.gitignore.io/api/django
 # Edit at https://www.gitignore.io/?templates=django
@@ -124,3 +124,4 @@ dmypy.json
 .pyre/
 
 # End of https://www.gitignore.io/api/django
+manager/manager/__pycache__/settings.cpython-37.pyc
