@@ -6,9 +6,8 @@ class App extends Component {
   render() {
     return (
       <Container>
-        <Image>
-          <Button>Click Here</Button>
-        </Image>
+        <Image></Image>
+        <Button>Click Here</Button>
       </Container>
     )
   }
