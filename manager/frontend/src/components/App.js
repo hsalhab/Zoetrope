@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import { Container, Image, Button } from 'react-bootstrap';
+import { StyledButton } from './StyledButton.js';
+
+import '../styles/main.scss';
 
 class App extends Component {
   render() {
