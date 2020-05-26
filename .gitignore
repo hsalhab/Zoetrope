@@ -1,5 +1,7 @@
 env/
-manager/app/__pycache__/*
+manager/app/__pycache__
+manager/manager/__pycache__
+manager/app/movie_engine/__pycache__
 node_modules
 .vscode
 manager/static
