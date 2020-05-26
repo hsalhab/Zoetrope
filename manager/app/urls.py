@@ -1,7 +1,8 @@
 from rest_framework import routers
-from .api import AppViewSet
+from .api import AppViewSet, MovieViewSet
 
 router = routers.DefaultRouter()
-router.register('api/app', AppViewSet, 'app')
+router.register('api/movies', AppViewSet, 'movie-list')
+router.register('api/get-movie', MovieViewSet, 'movie-detail')
 
 urlpatterns = router.urls
