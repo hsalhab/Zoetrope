@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import axios from 'axios';
 import { Container, Image, Button, Row, Col } from 'react-bootstrap';
 
 import '../styles/main.scss';
