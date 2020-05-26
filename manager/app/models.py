@@ -14,9 +14,11 @@ class MovieManager(models.Manager):
 class Movie(models.Model):
     objects = MovieManager()
     movieid = models.BigIntegerField(db_column='movieId', primary_key=True)
-    title = models.TextField(blank=True, null=True)
-    genres = models.TextField(blank=True, null=True)
+    title = models.TextField(db_column='title', blank=True, null=True)
+    genres = models.TextField(db_column='genres', blank=True, null=True)
     imdbid = models.TextField(db_column='imdbId', blank=True, null=True)
+    year = models.IntegerField(db_column='year', blank=True)
+    poster = models.TextField(db_column='poster', blank=True, null=True)
 
     class Meta:
         managed = False
