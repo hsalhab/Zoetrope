@@ -15,6 +15,11 @@ class App extends Component {
             <Image src=""></Image>
           </Col>
         </Row>
+        <Row>
+          <Col className='text-center'>
+            <h2>Example Movie Title</h2>
+          </Col>
+        </Row>
         <br/>
         <Row>
           <Col className='text-center'>

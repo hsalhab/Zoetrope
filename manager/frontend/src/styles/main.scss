@@ -3,5 +3,8 @@ $theme-colors: (
     "primary": #fc5185
 );
 
+h1, h2, h3, h4, h5, h6, p {
+    color: #f0f0f0
+}
 
 @import "../../../../node_modules/bootstrap/scss/bootstrap.scss";
