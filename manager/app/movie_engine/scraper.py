@@ -71,4 +71,12 @@ def normalize_titles():
     engine.execute(sql)
     movie_links.to_sql('movies', con=engine)
 
+def filter_ratings():
+    def movie_exists(movieId):
+        return movieId in movie_links['movieId']
+    movie_links = pd.read_sql('select movieId, title, genres, imdbId, year, poster from movies;', con=engine)
+    _, ratings, _ = load_data()
+    ratings = ratings[ratings['movieId'].apply(movie_exists)]
+    ratings.to_sql('ratings', con=engine)
+
 normalize_titles()
