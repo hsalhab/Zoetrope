@@ -73,10 +73,15 @@ def normalize_titles():
 
 def filter_ratings():
     def movie_exists(movieId):
-        return movieId in movie_links['movieId']
+        return movieId not in movie_links['movieId']
     movie_links = pd.read_sql('select movieId, title, genres, imdbId, year, poster from movies;', con=engine)
     _, ratings, _ = load_data()
     ratings = ratings[ratings['movieId'].apply(movie_exists)]
+    print(ratings.head(10))
+    ratings = ratings.rename_axis('id')
+    sql = text('DROP TABLE IF EXISTS ratings;')
+    engine.execute(sql)
     ratings.to_sql('ratings', con=engine)
 
-normalize_titles()
+filter_ratings()
+
